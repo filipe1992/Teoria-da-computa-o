@@ -24,9 +24,10 @@ b = Base()
 
 def main():
     global b
-    b.le_palavra("a")
+    b.le_palavra("aa")
     def W(): return A() and B()
-    def A(): return (b.xp("a") and b.np() and A()) or (b.xp("a") and b.np())
+    def A(): return (b.xp("a") and b.np() and Al())
+    def Al(): return (b.xp("a") and b.np() and A()) or True
     def B(): return (b.xp("b") and b.np() and B()) or True
     
     if W() and b.xp(b.fim):
