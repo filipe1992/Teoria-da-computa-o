@@ -19,7 +19,7 @@ from hw04.Base import Base
 def mainA():
     b = Base()
     b.le_palavra("00100100")
-    def A(): return (b.xp("0") and b.np() and A()) or (b.xp("1") and b.np() and B()) #or True
+    def A(): return (b.xp("0") and b.np() and A()) or (b.xp("1") and b.np() and B())
     def B():return (b.xp("0") and b.np() and C())
     def C(): return (b.xp("0") and b.np() and A())
     
