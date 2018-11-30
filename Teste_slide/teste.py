@@ -6,6 +6,7 @@ Created on 30 de nov de 2018
 s=""
 p=0
 
+
 def le_palavra(palavra="@"):
     global s,p
     p=0
