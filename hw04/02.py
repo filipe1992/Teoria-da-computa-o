@@ -27,14 +27,10 @@ def main():
     b.le_palavra("aa")
     def W(): return A() and B()
     def A(): return (b.xp("a") and b.np() and Al())
-    def Al(): return (b.xp("a") and b.np() and A()) or True
+    def Al(): return (A() or True)
     def B(): return (b.xp("b") and b.np() and B()) or True
     
-    if W() and b.xp(b.fim):
-        print(b.aceite())
-    else:
-        print(b.rejeicao())
-
+    b.verificar(W())
 
 if __name__ == '__main__':
     main()

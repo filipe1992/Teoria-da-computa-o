@@ -22,13 +22,8 @@ def mainA():
     def A(): return (b.xp("0") and b.np() and A()) or (b.xp("1") and b.np() and B())
     def B():return (b.xp("0") and b.np() and C())
     def C(): return (b.xp("0") and b.np() and A())
+    b.verificar(A())
     
-    if A() and b.xp(b.fim):
-        print(b.aceite())
-    else:
-        print(b.rejeicao())
- 
- 
 def mainB():
     b = Base()
     b.le_palavra("abbaaab")
@@ -37,12 +32,8 @@ def mainB():
     def PB():return (b.xp("b") and b.np() and PB()) or (b.xp("a") and b.np() and I()) or True
     def IB():return (b.xp("b") and b.np() and IB()) or (b.xp("a") and b.np() and P())
     
-    if P() and b.xp(b.fim):
-        print(b.aceite())
-    else:
-        print(b.rejeicao())
+    b.verificar(P())
     
-
 if __name__ == '__main__':
     mainA()
     mainB()
