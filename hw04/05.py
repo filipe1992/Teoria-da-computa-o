@@ -33,9 +33,7 @@ def passo1(mat,cadeia):
 def roldana(mat, n):
     for s in range(2,n+1):
         for r in range(n-s+1):
-            mat[s][r]=[] 
-            printmat(mat)
-            print("\n\n")    
+            mat[s][r]=[]     
             for k in range(1,s):
                 for i in mat[k][r]:
                     for j in mat[s-k][r+k]:
@@ -47,10 +45,11 @@ def roldana(mat, n):
 
 def CYK(gramatica, cadeia):
     mat = [list(cadeia)]+[[""]*len(cadeia) for _ in range(len(cadeia))]
-    printmat(mat)
     passo1(mat,cadeia)
+    print("\n#------------------------------Primeiro Passo-------------------------------------\n\n")
     printmat(mat)
     roldana(mat, len(cadeia))
+    print("\n#------------------------------Completo-------------------------------------\n\n")
     printmat(mat)
 
 CYK(g, c)
