@@ -47,11 +47,17 @@ class Base:
     def esta_vazia(self):
         print(self.pilha)
         return len(self.pilha) > 0
-    
+#------------------------------------------------------------------------------ 
+
     def verificar(self, func):
         if func and self.xp(self.fim):
             print(self.aceite())
         else:
             print(self.rejeicao())
+#------------------------------------------------------------------------------ 
+    def w(self,val):
+        print(val)
+        return True
+            
     
     

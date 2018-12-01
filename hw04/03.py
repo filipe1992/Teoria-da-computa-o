@@ -22,9 +22,15 @@ def mainA():
     def Cl():return (C() or True)
     b.verificar(S())
     
-def main():
-    b.le_palavra("aabbbbbb")
-    
-
+def mainB():
+    b.le_palavra("aabbbbbbb")
+    def S(): return (A() and b.xp("b") and b.np()) or (b.xp("a") and b.np() and A() and b.xp("b") and b.np()
+                                                                         and b.xp("b") and b.np() 
+                                                                         and b.xp("b") and b.np())
+    def A(): return (b.xp("a") and b.np() and A() and b.xp("b") and b.np()
+                                                  and b.xp("b") and b.np() 
+                                                  and b.xp("b") and b.np()) or True
+    b.verificar(S())
 if __name__ == '__main__':
-    main()
+    mainA()
+    mainB()
