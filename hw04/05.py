@@ -13,10 +13,15 @@ g = {"AA": ["S"],
      "AS": ["S","A"],
      "b": ["S"],
      "SA": ["A"],
-     "a": ["A"],
-     "SS":[] 
+     "a": ["A"]
     }
+
 c = "abaab" 
+
+def produzido_por(val):
+    if val in g:
+        return g[val]
+    return []
 
 def printmat(mat):
     for i in mat[::-1]:
@@ -34,7 +39,7 @@ def roldana(mat, n):
             for k in range(1,s):
                 for i in mat[k][r]:
                     for j in mat[s-k][r+k]:
-                        aux = g[i+j]
+                        aux = produzido_por(i+j)
                         for a in aux:
                             if not (a in mat[s][r]): 
                                 mat[s][r]+= a 
